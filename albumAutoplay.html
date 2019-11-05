@@ -1,0 +1,219 @@
+<script>
+
+    var link0 = "https://pbs.twimg.com/media/BtW5oVhCYAACwvk.jpg";
+
+    var link1 = "https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s480x480/e35/23596297_2054513244777241_226020515058286592_n.jpg?ig_cache_key=MTY1MTQzMzYyNzYyMTM0MjE2Nw%3D%3D.2";
+
+    var link2 = "https://www.babybedding.com/images/products/solid-bubblegum-pink-cradle-sheet_large.jpg";
+
+    var link3 = "http://www.solidbackgrounds.com/images/2560x1440/2560x1440-light-blue-solid-color-background.jpg";
+
+    var link4 = "http://www.solidbackgrounds.com/images/2880x1800/2880x1800-mellow-apricot-solid-color-background.jpg";
+
+
+    var link5 = "http://www.thecolorswatch.com/mm5/graphics/00000001/12-0426%20TCX.jpg";
+
+    var link6 = "http://www.solidbackgrounds.com/images/1920x1080/1920x1080-mellow-yellow-solid-color-background.jpg";
+
+    var link7 = "https://www.riterug.com/Images/carpet/swatches/41212_29145MellowGrey.jpg";
+
+    var link8 = "https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12501924_1716794425232337_1357081942_n.jpg"
+
+    var link9 = "https://78.media.tumblr.com/450962eba1da1ba7a9fd6e8d9155b201/tumblr_oa7tdmsTOh1tpx1lqo1_1280.jpg"
+
+    var link10 = "https://i.pinimg.com/originals/10/c3/d2/10c3d2c05a34b21df3c87f08fd8cb6f3.jpg"
+
+    var link11 = "https://scontent-sea1-1.cdninstagram.com/vp/4959d1218badcfb3c1e4c9e1cbc0e8a7/5AE83CD2/t51.2885-15/s480x480/e35/26225724_136198740514886_173040689007820800_n.jpg?ig_cache_key=MTY5NTEzNTcwMTA0NzQ0NDMxMg%3D%3D.2"
+
+    var link12 = "https://scontent-lga3-1.cdninstagram.com/vp/95f497bdcba350f599c543f8396312cd/5B012F59/t51.2885-15/e35/14711858_1662087624082159_8693141384812560384_n.jpg"
+
+
+
+var image = document.getElementById("displayPic");
+var thumb_array=[link0, link1, link2, link3, link4, link5, link6, link7, link8, link9, link10, link11, link12 ];
+var count=0;
+var cap_array=['pic1','pic2','pic3','pic4','pic5','pic6','pic7','pic8','pic9','pic10','pic11','pic12' ];
+
+
+
+function sliding()
+{
+
+    document["displayPic"].src = thumb_array[count];
+    count++;
+    if(count>=thumb_array.length)
+    {
+    count=0;
+    }
+
+}
+
+
+function captioning() {
+    document.getElementById("captionPic").value = cap_array[count];
+    count++;
+    if(count>=cap_array.length)
+    {
+    count=0;
+    }
+}
+
+
+
+function StartSlide() {
+     val1 = document.getElementById("speed").value;
+   //  alert(String(val1));
+
+      if (val1 == "fast"){
+         timer = setInterval("sliding()",1000);
+      //   capt = setInterval("captioning()",1000);
+      }
+
+
+      if (val1 == "medium"){
+         timer = setInterval("sliding()",3000);
+      //   capt = setInterval("captioning()",3000);
+      }
+
+      if (val1 == "slow"){
+         timer = setInterval("sliding()",5000);
+      //   capt = setInterval("captioning()",5000);
+      }
+
+}
+
+
+function StopSlide() {
+    clearInterval(timer);
+    clearInterval(capt);
+}
+
+
+
+
+
+</script>
+
+
+
+<style>
+    img {
+        border: 1px solid #ddd; /* Gray border */
+        border-radius: 4px; /* Rounded border */
+        padding: 5px;
+
+    }
+
+    /* hover effect */
+    img:hover {
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+</style>
+
+
+
+<body>
+
+<img id = "displayPic"  src = link1  name = "image" style="width:400px;height:400px;"/>
+
+
+<a>
+    <img id="thumb0"
+         src="https://pbs.twimg.com/media/BtW5oVhCYAACwvk.jpg"
+         style="width:70px;height:70px;">
+</a>
+
+<a>
+    <img id="thumb1"
+         src="https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s480x480/e35/23596297_2054513244777241_226020515058286592_n.jpg?ig_cache_key=MTY1MTQzMzYyNzYyMTM0MjE2Nw%3D%3D.2"
+         style="width:70px;height:70px;">
+</a>
+
+<a>
+    <img id="thumb2"
+         src="https://www.babybedding.com/images/products/solid-bubblegum-pink-cradle-sheet_large.jpg"
+         style="width:70px;height:70px;">
+</a>
+
+<a>
+    <img id="thumb3"
+         src="http://www.solidbackgrounds.com/images/2560x1440/2560x1440-light-blue-solid-color-background.jpg"
+         style="width:70px;height:70px;">
+</a>
+
+<a>
+    <img id="thumb4"
+         src="http://www.solidbackgrounds.com/images/2880x1800/2880x1800-mellow-apricot-solid-color-background.jpg" style="width:70px;height:70px;">
+</a>
+
+<a>
+    <img id="thumb5"
+         src="http://www.thecolorswatch.com/mm5/graphics/00000001/12-0426%20TCX.jpg"
+         style="width:70px;height:70px;">
+</a>
+
+<a>
+    <img id="thumb6"
+         src="http://www.solidbackgrounds.com/images/1920x1080/1920x1080-mellow-yellow-solid-color-background.jpg" style="width:70px;height:70px;">
+</a>
+
+<a>
+    <img id="thumb7"
+         src="https://www.riterug.com/Images/carpet/swatches/41212_29145MellowGrey.jpg" style="width:70px;height:70px;">
+</a>
+
+<a>
+    <img id="thumb8"
+         src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12501924_1716794425232337_1357081942_n.jpg" style="width:70px;height:70px;">
+</a>
+
+<a>
+    <img id="thumb9"
+         src="https://78.media.tumblr.com/450962eba1da1ba7a9fd6e8d9155b201/tumblr_oa7tdmsTOh1tpx1lqo1_1280.jpg" style="width:70px;height:70px;">
+</a>
+
+
+<a>
+    <img id="thumb10"
+         src="https://i.pinimg.com/originals/10/c3/d2/10c3d2c05a34b21df3c87f08fd8cb6f3.jpg" style="width:70px;height:70px;">
+</a>
+
+<a>
+    <img id="thumb11"
+         src="https://scontent-sea1-1.cdninstagram.com/vp/4959d1218badcfb3c1e4c9e1cbc0e8a7/5AE83CD2/t51.2885-15/s480x480/e35/26225724_136198740514886_173040689007820800_n.jpg?ig_cache_key=MTY5NTEzNTcwMTA0NzQ0NDMxMg%3D%3D.2" style="width:70px;height:70px;">
+</a>
+
+
+<a>
+    <img id="thumb12"
+         src="https://scontent-lga3-1.cdninstagram.com/vp/95f497bdcba350f599c543f8396312cd/5B012F59/t51.2885-15/e35/14711858_1662087624082159_8693141384812560384_n.jpg" style="width:70px;height:70px;">
+</a>
+
+
+
+// text field for image caption
+<input type="text" id="captionPic" >
+
+
+
+<p>Please select the pace you would like the slide show to play:</p>
+
+
+<button onclick="StartSlide()">Start Slide Show</button>
+<button onclick="StopSlide()">Stop Slide Show</button>
+
+
+
+
+
+Fast, Medium or Slow?:
+<select id="speed">
+  <option value="fast">Fast</option>
+  <option value="medium">Medium</option>
+  <option value="slow">Slow</option>
+</select>
+
+
+
+
+</body>
